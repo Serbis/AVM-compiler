@@ -7,9 +7,9 @@ public class Node {
     public Node() {
     }
 
-    //public void error(String s) {
-    //    throw new Error("near line" + lexline + ": "+s);
-    //}
+    public void error(String s) {
+        throw new Error(/*"near line" + lexline + ": +*/s);
+    }
 
     public int newlabel() {
         return ++labels;

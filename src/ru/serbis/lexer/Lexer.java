@@ -121,7 +121,7 @@ public class Lexer {
                 readch();
             } while (Character.isLetterOrDigit(peek));
             String s = b.toString();
-            peek = ' ';
+            //peek = ' ';
             switch (s) {
                 case "class":
                     return new Token(Tag.CLASS, s, line);
@@ -142,6 +142,7 @@ public class Lexer {
                 case "void":
                     return new Token(Tag.TYPE, s, line);
                 default:
+                    notNext = true;
                     return new Token(Tag.ID, s, line);
             }
 
